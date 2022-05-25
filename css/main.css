@@ -1,0 +1,502 @@
+/* 웹폰트(노토산스) */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/* 전체선택자 */
+* {margin: 0 auto; padding: 0;}
+/* li태그의 글머리 기호 없앰 */
+li { list-style: none;}
+/* 모든 a태그의 밑줄 없앰, 블록요소로 만듬, 글자색 검정 */
+a { text-decoration: none; display: block; color: #111; font-family: 'Noto Sans KR', sans-serif;
+}
+/* header, section, footer 스타일 설정 */
+header, section, footer {
+    width: 100%;
+    float: left;
+}
+/* 모든 영역에 box-sizing설정 */
+header, section, footer, div {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 브라우저의 가운데 정렬 */
+.center_box {
+    width: 1300px;
+    margin: 0 auto;
+}
+header {
+    height: 130px;
+}
+header .up_area {
+    height: 40px;
+    width: 100%;
+    background-color: #d6c5cc;
+}
+header .up_area .right_menu {
+    float :right
+}
+header .up_area .right_menu ul li {
+    float: left;
+}
+header .up_area .right_menu ul li a {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+}
+header .up_area .right_menu ul li:last-child a {
+    background-color: #c85e86;
+}
+/* 마지막에서 2번째 li를 가리킴 */
+header .up_area .right_menu ul li:nth-last-child(2) {
+    background-color: #c88ba1;
+}
+/* 로고는 왼쪽에 배치 */
+header .down_area .logo {
+    float: left;
+}
+/* 내비게이션(메뉴)은 오른쪽에 배치 */
+header .down_area nav {
+    float: left;
+    z-index: 11;
+    position: relative;
+}
+/* 주메뉴 */
+header .down_area nav > ul > li {
+    float: left;
+    padding: 20px 0;
+    margin: 0 20px;
+}
+header .down_area nav > ul > li > a {
+    padding: 10px 0;
+    margin-right: 30px;
+    margin-left: 50px;
+    padding-bottom: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    /* 자식객체 :after의 위치 설정할 때 기준이 a태그임 */
+    position: relative;
+    /* 마우스 오버할 때 밑줄이 글자길이만큼만 그려짐 */
+    display: inline-block;
+    
+}
+header .down_area nav > ul > li > a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: #c88ba1;
+    left: 50%;
+    bottom: 20px;
+    transition: all 0.5s;
+}
+header .down_area nav > ul > li:hover > a:after {
+    width: 100%;
+    left: 0;
+}
+/* 서브메뉴 */
+header .down_area nav .sub {
+    /* display: none; */
+    background-color: white;
+    border-top: 3px solid #c88ba1;
+    /* 서서히 나타나는 애니메이션 */
+    height: 0;
+    overflow: hidden;
+    /* 투명도 0 */
+    opacity: 0;
+    /* 애니메이션 */
+    transition: all 0.5s;
+}
+header .down_area nav .sub li a {
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+header .down_area nav .sub li a:hover {
+    background-color: #efefef;
+}
+header .down_area nav > ul > li:hover .sub {
+    /* display: block; */
+    opacity: 1;
+    height: auto;
+}
+section {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+section#visual {
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+section#banner .movie {
+    width: 675px;
+    height: 390px;
+    margin-right: 40px;  /*오른쪽 여백*/
+    float: left;
+}
+video {
+    width: 675px;
+    height: 390px;
+    margin-right: 40px;
+    float: left;
+}
+section#banner .banner_right {
+    width: 585px;
+    height: 377px;
+    float: left;
+}
+section#banner .banner_right ul li {
+    float: left;
+    width: 258px;
+    height: 183px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+section#banner .banner_right ul li:first-child {
+    background-image:url(../img/Group1.png);
+    margin-right: 25px;  /*오른쪽 여백*/
+    margin-bottom: 25px;
+}
+section#banner .banner_right ul li:nth-child(2) {
+    background-image:url(../img/Group2.png);
+    margin-bottom: 25px;   /*아래쪽 여백*/
+}
+section#banner .banner_right ul li:nth-child(3) {
+    background-image:url(../img/Group3.png);
+    margin-right: 25px;  /*오른쪽 여백*/
+}
+section#banner .banner_right ul li:last-child {
+    background-image:url(../img/Group4.png);   
+}
+section#banner .banner_right ul li .des {
+    position: absolute;
+    top : 40px ;
+    padding: 20px;
+    /* padding을 넣어도 .des의 크기는 고정 */
+    box-sizing: border-box;
+}
+section#banner .banner_right ul li .des h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+section#banner .banner_right ul li .des p {
+    font-size: 14px;
+    
+}
+section#banner .banner_right ul li .pic {
+    width: 40px;
+    margin: 20px;
+    position: absolute;
+    top : 0;
+    right:0;
+}
+section#list {
+    background-color: #d6c5cc;
+    background-attachment: fixed;
+}
+/* 모든 section의 h1에 스타일 적용 */
+section#list h1 { 
+    text-align: center;
+    
+}
+section#list h1:after {
+    content: "";
+    border-bottom: 1px solid #655152;
+    width: 160px;
+    display: block;
+    margin: 15px auto;
+}
+section#list .list_box {
+    margin-top: 60px;
+}
+section#list .list_box ul li {
+    float: left;
+    margin-right: 50px;
+    width: 220px;
+}
+/* 마지막 li영역의 오른쪽 여백 없앰 */
+section#list .list_box ul li:last-child {
+    margin-right: 0;
+}
+section#list .list_box ul li .photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* photo안의 이미지 조금 커지는 애니메이션 */
+section#list .list_box ul li .photo img {
+    transform: scale(1,1);
+    transition: all 0.5s;
+    margin-top: 20px;
+    
+}
+section#list .list_box ul li:hover .photo img {
+    transform: scale(1.1,1.1);
+}
+section#list .list_box ul li p {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background-color: #caa2b1;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+section#list .list_box ul li h4 {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #fff;
+}
+section#event .e_left {
+    background-image: url(../img/Group9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 821px;
+    height: 550px;
+    float: left;
+    margin-right: 30px;
+}
+section#event .e_right {
+    float: left;
+}
+section#event .e_right .event1 {
+    background-image: url(../img/Group10.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 449px;
+    height: 262px;
+    margin-bottom: 30px;
+}
+section#event .e_right .event2 {
+    background-image: url(../img/Group11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 449px;
+    height: 262px;
+}
+section#event .e_left .des h3{
+    font-size: 20px;
+
+}
+
+section#event h1 { 
+    text-align: center;
+    width: 160px;
+    margin-top: 40px;
+}
+section#event .e_left p {
+    font-size: 28px;
+    text-align: right;
+    margin-right: 75px;
+    margin-top: 20px;
+    color: #fff;
+    
+} 
+section#event .e_right .event1 p {
+    font-size: 22px;
+    text-align: left;
+    margin-left: 15px;
+    color: #fff;
+    padding-top: 170px;
+} 
+section#event .e_right .event2 p {
+    font-size: 22px;
+    text-align: left;
+    margin-left: 15px;
+    color: #fff;
+    padding-top: 170px;
+} 
+
+
+/* section#notice .n_left h1 {
+    font-size: 30px;
+    margin-right: 40px;
+}
+section#notice .n_left p {
+    font-size: 20px;
+    margin-right: 40px;
+}
+section#notice .n_right h1 {
+    font-size: 30px;
+    float: left;
+}
+section#notice .n_right p {
+    font-size: 20px;
+    float: left;
+} */
+
+
+/* 공지사항 */
+section#notice .news {
+    width:630px;
+    float:left;
+    margin-right: 40px;
+
+}
+section#notice  .title  {
+    /*  h1태그와 가로로 정렬 */
+    width:100%;
+
+    float:right;
+    margin-bottom: 20px;
+    
+}
+
+section#notice .title h1{
+    float:left;
+    white-space:nowrap;
+}
+
+section#notice  .title a {
+    /* h1태그와 가로로 정렬 */
+    float:right;
+    width:40px;
+}
+
+section#notice hr {
+    background-color: #efefef;
+    border:none;
+    height:1px;
+    width:100%;
+}
+
+
+section#notice .news .con1 {
+    /*  .title과 .con1영역을 분리함 */
+    float:left;
+    width:100%
+}
+
+section#notice .news .con1 ul li {
+    padding:10px 0 30px;
+    border-bottom:1px solid #efefef;
+}
+
+section#notice .news .con1 ul li a {
+    padding:10px 0;
+}
+
+section#notice .news .con1 ul li p {
+    /* a태그와 가로로 나열 */
+    float:left;
+}
+
+section#notice .news .con1 ul li a span {
+    width:20px;
+    /* 인라인 요소를 블록요소로 변환 */
+    display:block;
+    /* p태그랑 가로로 나열 */
+    float:right;
+}
+
+
+section#notice .recurit {
+    width:630px;
+    /* news 영역과 가로로 나열 */
+    float:left;
+}
+
+.recurit .title a img {
+    width:40px;
+    float:right;
+}
+
+section#notice .recurit .con2 {
+    width:100%;
+    height:170px;
+    background-color: #7f63ab;
+    box-sizing: border-box;
+    padding:15px;
+    margin-top:10px;
+}
+
+section#notice .recurit .con2 p {
+    float:left;
+    line-height:40px;
+    color:#fff;
+    margin-right: 20px;
+    padding:20px;
+}
+
+section#notice .recurit .con2 p:last-child {
+    width:270px;
+    padding:0;
+    float:right;
+}
+
+section#notice .title img {
+    margin-left: 500px;
+}
+footer {
+    background-color: #efefef;
+    padding:50px 0;
+
+}
+
+footer .f_logo {
+    width:120px;
+    float:left;
+    margin-right:100px;
+}
+
+footer .addr {
+    /* .f_logo 와 가로로 나열 */
+    float:left;
+}
+
+footer .addr .info ul li {
+    /* 이용약관, 개인정보철리방침 등..... 가로로 나열 */
+    float:left;
+}
+
+footer .addr .info ul li a{
+    font-size:18px;
+    padding:10px 40px;
+    padding-left: 0;
+}
+
+footer .addr address {
+    /* 기울어진 글자 기울임 없앰 */
+    font-style:normal;
+    /* .info영역의 li에 적용된 floot:left를 address에서
+    적용 안되게 함 */
+    clear:both;
+    color:#999;
+    font-size:16px;
+    
+}
+
+footer .sns {
+    /* .f_logo와 .addr 영역과 나란히 가로로 나열 */
+    float:right;
+    margin-top:20px;
+    margin-right: 400px;
+}
+
+footer .sns ul li {
+    float:left;
+}
+
+footer .sns ul li a span {
+    width:50px;
+    /* 인라인 요소를 블록요소로 변환 */
+    display: block;
+    float:left;
+    margin-top: 50px;
+    padding:10px;
+}
