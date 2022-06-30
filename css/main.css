@@ -345,14 +345,13 @@ section#notice .n_right p {
 section#notice .news {
     width:630px;
     float:left;
-    margin-right: 40px;
+    margin-right: 50px;
 
 }
 section#notice  .title  {
     /*  h1태그와 가로로 정렬 */
-    width:100%;
-
-    float:right;
+    /* width:100%; */
+    float:left;
     margin-bottom: 20px;
     
 }
@@ -364,15 +363,16 @@ section#notice .title h1{
 
 section#notice  .title a {
     /* h1태그와 가로로 정렬 */
-    float:right;
+    float:left;
     width:40px;
 }
 
 section#notice hr {
-    background-color: #efefef;
+    /* background-color: #efefef; */
     border:none;
-    height:1px;
-    width:100%;
+    /* height: 100px; */
+    /* height:1px; */
+    /* width:100%; */
 }
 
 
@@ -408,10 +408,11 @@ section#notice .news .con1 ul li a span {
 section#notice .recurit {
     width:630px;
     /* news 영역과 가로로 나열 */
-    float:left;
+    float:right;
+
 }
 
-.recurit .title a img {
+section#notice .recurit .title a img {
     width:40px;
     float:right;
 }
@@ -439,9 +440,28 @@ section#notice .recurit .con2 p:last-child {
     float:right;
 }
 
-section#notice .title img {
-    margin-left: 500px;
+section#notice .title {
+    float: left;
 }
+section#notice .news img {
+    /* margin-left: 00px; */
+    /* margin-top: -100px; */
+}
+
+section#notice .pic img {
+    margin-left: 500px;
+    margin-top: -100px;
+}
+
+section#notice .con2 img {
+    height: 200px;
+}
+
+
+
+
+
+
 footer {
     background-color: #efefef;
     padding:50px 0;
